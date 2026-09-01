@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Verificadores</title>
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+
+    <!-- ================================== -->
+    <!--         Atividade 1                -->
+    <!-- ================================== -->
+ 
+    <h1>Verificador de Idade</h1>
+ 
+    <input type="number" id="idade" placeholder="Digite sua idade">
+ 
+    <button onclick="verificarIdade()">Verificar</button>
+ 
+    <p id="ResultadoIdade"></p>
+
+    <!-- ================================== -->
+    <!--         Atividade 2                -->
+    <!-- ================================== -->
+ 
+    <h1>Verificador de Número</h1>
+ 
+    <input type="number" id="numero" placeholder="Digite um número">
+ 
+    <button onclick="verificarNumero()">Verificar</button>
+ 
+    <p id="ResultadoNumero"></p>
+ 
+    <!-- ================================== -->
+    <!--         Atividade 3                -->
+    <!-- ================================== -->
+ 
+    <h1>Aprovação do Aluno</h1>
+ 
+    <input type="number" id="nota" placeholder="Digite sua nota">
+ 
+    <button onclick="verificarNota()">Verificar</button>
+ 
+    <p id="ResultadoNota"></p>
+
+    <!-- ================================== -->
+    <!--         Atividade 4                -->
+    <!-- ================================== -->
+
+    <div class="painel">
+        <h1>Sistema de Prioridade</h1>
+        <p class="legenda">analisa a prioridade de uma tarefa</p>
+ 
+        <label for="prioridade">prioridade</label>
+        <select id="prioridade">
+            <option value="">selecionar...</option>
+            <option value="urgente">urgente</option>
+            <option value="alta">alta</option>
+            <option value="media">media</option>
+            <option value="baixa">baixa</option>
+        </select>
+ 
+        <button onclick="verificarPrioridade()">Verificar</button>
+ 
+        <p id="resultado"></p>
+    </div>
+    <script src="script.js"></script>
+    
+    
+        <script src="script.js"></script>
+ 
+</body>
+</html>
