@@ -68,10 +68,84 @@
  
         <p id="resultado"></p>
     </div>
-    <script src="script.js"></script>
+
+
+
+
     
-    
-        <script src="script.js"></script>
+
+
+
+    <!-- ================================== -->
+    <!--         Atividade 5                -->
+    <!-- ================================== -->
+
+        <div class="painel">
+        <h1>Tarefa Atrasada</h1>
+        <p class="legenda">avalia se a tarefa exige atenção imediata</p>
  
+        <label for="prioridadeT">prioridade</label>
+        <select id="prioridadeT">
+            <option value="selecionarT">selecionar...</option>
+            <option value="urgenteT">urgente</option>
+            <option value="altaT">alta</option>
+            <option value="baixaT">baixa</option>
+        </select>
+ 
+        <label class="check-label" for="atrasadaT">
+            <input type="checkbox" id="atrasadaT">
+            <span>tarefa está atrasada</span>
+        </label>
+ 
+        <button onclick="verificarTarefa()">Verificar</button>
+ 
+        <p id="resultados"></p>
+    </div>
+
+
+
+
+
+    <!-- ================================== -->
+    <!--         Atividade 6                -->
+    <!-- ================================== -->
+
+
+    <h1>Login Simples</h1>
+ 
+<label for="usuario">Usuário:</label>
+ 
+<br>
+ 
+<input type="text" id="usuario" placeholder="Digite seu usuário">
+ 
+<br>
+ 
+<label for="senha">Senha:</label>
+ 
+<br>
+ 
+<input type="password" id="senha" placeholder="Digite sua senha">
+ 
+<br>
+ 
+<button onclick="verificarLogin()">Entrar</button>
+ 
+<p id="ResultadoLogin"></p>
+
+
+
+<!-- =================================== -->
+<!--          Atividade 7                -->
+<!-- =================================== -->
+ <h1>Verificador de Idade - Ternário</h1>
+ 
+<input type="number" id="idadeTernario" placeholder="Digite sua idade">
+ 
+<button onclick="verificarIdadeTernario()">Verificar</button>
+ 
+<p id="ResultadoTernario"></p>
+
+    <script src="script.js"></script>
 </body>
 </html>
