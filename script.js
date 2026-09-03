@@ -142,3 +142,115 @@ function verificarIdadeTernario() {
     document.getElementById("ResultadoTernario").textContent = situacao;
     
 }
+
+//=================================
+// atividade 8
+// ================================
+
+function verificarDesconto() {
+    const valorCompra = Number(document.getElementById("valorCompra").value);
+    const clientVIP = document.getElementById("clientVip").checked;
+
+    let desconto = 0
+
+    if (valorCompra > 500) {
+        desconto = 0.20;
+    } else if (valorCompra >= 200 && valorCompra <= 500) {
+        desconto = 0.10;
+    } else {
+        desconto = 0;
+    }
+
+    if (clientVIP) {
+        desconto += 0.5;
+    }
+
+    const valorDesconto = valorCompra * desconto;
+    const valorFinal = valorCompra - valorDesconto;
+
+    document.getElementById("resultadoDesconto").textContent = 
+    `Valor de compra de R$ ${valorCompra.toFixed(2)}
+    Desconto: R$ ${valorDesconto.toFixed(2)}
+    Valor final: R$ ${valorFinal.toFixed(2)}`;
+}
+
+//=================================
+// atividade 9
+// ================================
+
+function verificarTarefa() {
+ 
+    const validação = document.getElementById("validaçãoTarefa");
+    const tarefa = {
+            titulo: "Estudar JavaScript",
+            concluida: false
+        };
+ 
+    if (validação.checked) {
+        marcarComoConcluida(tarefa);
+    } else {
+        document.getElementById("resultadoValidaçãoTarefa").textContent =
+            "A tarefa ainda não foi concluída.";
+    }
+ 
+    function marcarComoConcluida(tarefa) {
+ 
+        if (!tarefa) {
+        document.getElementById("resultadoValidaçãoTarefa").textContent =
+            "Nenhuma tarefa foi informada!";
+        return;
+    }
+ 
+    if (tarefa.concluida) {
+        document.getElementById("resultadoValidaçãoTarefa").textContent =
+            "Esta tarefa já foi concluída.";
+        statusTarefa.textContent = "Concluída";
+        return;
+    }
+ 
+    tarefa.concluida = true;
+   
+    statusTarefa.textContent = "Concluída";
+ 
+    document.getElementById("resultadoValidaçãoTarefa").textContent =
+        "Tarefa concluída com sucesso!";
+    }
+}
+
+//=================================
+// atividade 10
+// ================================
+
+function processarAtendimento() {
+    const opcao = Number(document.getElementById("opcaoAtendimento").value);
+    const clienteVip = document.getElementById("clienteVipAtendimento").checked;
+    const resultado = document.getElementById("resultadoAtendimento");
+ 
+    switch (opcao) {
+        case 1:
+            resultado.innerText = "Consultando seu pedido...";
+            break;
+        case 2:
+            resultado.innerText = "Solicitação de cancelamento registrada.";
+            break;
+        case 3:
+            if (clienteVip) {
+                resultado.innerText = "Cliente VIP: atendimento prioritário.";
+            } else {
+                resultado.innerText = "Você será encaminhado para um atendente.";
+            }
+            break;
+        case 4:
+            resultado.innerText = "Atendimento encerrado com sucesso.";
+            break;
+        default:
+            resultado.innerText = "Opção inválida.";
+            break;
+    }
+}
+
+
+//=================================
+// atividade extra
+// ================================
+
